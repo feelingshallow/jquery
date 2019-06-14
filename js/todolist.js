@@ -3,6 +3,7 @@ window.addEventListener('load',function () {
     let messagebox=document.querySelector('.message')
     let prev=0;
     let type='all';
+    localStorage.clear();
 
     //    创建数组 用来添加项目
     let todolist=[
