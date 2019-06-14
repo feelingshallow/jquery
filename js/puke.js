@@ -32,7 +32,7 @@ $(function () {
        }
    }
      //剩余牌放底部
-     for (;index<52;index++) {
+     for (index=index+1;index<52;index++) {
          let obj=puke[index];
          $('<div>').addClass('puke').html('')
              .attr('id',-2+'_'-2)
@@ -84,9 +84,7 @@ $(function () {
           $('.left:last').css({zIndex:n++}).animate({left:650,bottom:100},function () {
               $(this).removeClass('left').addClass('right')
           })
-          $('.left:eq(0)').css({zIndex:n++}).animate({left:520,bottom:100},function () {
-              $(this).removeClass('left').addClass('right')
-          })
+
 
       });
       $('#2').on('click',function () {
