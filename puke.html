@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .box{
+            width: 800px;
+            height: 600px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+           margin:  auto;
+            background-image: url("./imgs/tim.jpg");
+            background-size: cover;
+            background-position: center;
+            background-color: #00c1de;
+            color: #4f5b64;
+
+        }
+        .puke{
+          width: 90px;
+            height: 120px;
+            position: absolute;
+            left: 350px;
+           top:0;
+           background-size: cover;
+            background-position: center;
+            opacity: 0;
+        }
+        .active{
+            border: #4cd964 3px solid;
+        }
+       ul{
+
+           position: absolute;
+           right: 40px;
+           bottom: 0;
+
+       }
+        ul li{
+            float: right;
+            width: 90px;
+            height: 120px;
+            background-image: url("./imgs/bg2.jpg");
+            background-size: cover;
+            background-position: center;
+            margin: 0 20px;
+        }
+        button[id='1']{
+            outline: none;
+            border: none;
+            position: absolute;
+            bottom: 40px;
+            left: 280px;
+            padding: 10px;
+            background-image:url("./imgs/anniu.jpg") ;
+            background-size: contain;
+            background-position: center;
+        }
+        button[id='2']{
+            outline: none;
+            border: none;
+            position: absolute;
+            bottom: 40px;
+            left: 350px;
+            padding: 10px;
+            background-image:url("./imgs/anniu.jpg") ;
+            background-size: contain;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+
+    规则：  数字相加=14的卡牌选中消失
+     <button id="1">
+         切牌
+     </button>
+    <button id="2">
+         撤回
+    </button>
+    <ul>
+        <li></li>
+         <li></li>
+    </ul>
+</div>
+<script src="js/puke.js"></script>
+</body>
+
+</html>

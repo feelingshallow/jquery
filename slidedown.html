@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav:first-child{
+            width: 1000px;
+            height: 60px;
+           margin: 20px auto;
+
+        }
+        nav:first-child  ul.a > li{
+            width: 20%;
+            height: 100%;
+            background: #00c1de;
+           float: left;
+            text-align: center;
+            line-height: 60px;
+        }
+        ul.slide{
+            width: 100%;
+            text-align: center;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+<ul class="a">
+    <li> 个人博客日记</li>
+    <li>羊羊们<ul class="slide">
+        <li >喜羊羊</li>
+        <li >美羊羊</li>
+        <li >懒羊羊</li>
+    </ul></li>
+    <li>数数<ul class="slide">
+        <li style="float: none">one</li>
+        <li style="float: none">two</li>
+        <li style="float: none">three</li>
+    </ul></li>
+    <li>啥也没</li>
+    <li>啥也没</li>
+</ul>
+</nav>
+<script>
+
+ let libtn=$('li:has(.slide)');
+ let ulbtn=$('.slide')
+     // libtn.on('mouseenter mouseleave',function () {
+     //     let index=$(this).index('li:has(.slide)')
+     //     $(ulbtn[index]).slideToggle()
+     // })
+  //    libtn.on('mouseenter',function () {
+  //        $(this).children().slideDown()
+  //    })
+  // libtn.on('mouseleave',function () {
+  //    $(this).children().slideUp()
+  // })
+    $(libtn).hover(function () {
+        $(this).children().slideToggle()
+    })
+
+</script>
+</body>
+</html>

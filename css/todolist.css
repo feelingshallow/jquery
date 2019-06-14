@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header{
+    height: 40px;
+
+    margin: 0 auto;
+    border-bottom:  1px solid #ff2d55;
+}
+header form{
+    width: 900px;
+    margin: 0 auto;
+   display: flex;
+}
+form >input{
+    border: 1px solid #cccccc;
+    padding: 6px 12px;
+    color: #333333;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.big{
+    width: 900px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+}
+.content{
+    width: 900px;
+    margin: 0 auto;
+    background: #d2f385;
+    height: 40px;
+    display: flex;
+    position: relative;
+    /*transition: 0.5s ease-in all;*/
+}
+.content li{
+  text-align: center;
+    flex-grow: 1;
+    line-height: 40px;
+    z-index: 1;
+    transition: 0.5s ease-in all;
+}
+li.hot{
+    color: #ffffff;
+}
+
+.top{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #bf97e3;
+    transition: 0.5s ease-in all;
+
+}
+li.hot:nth-child(1) ~.top{
+    transform: translate(0,0);
+}
+li.hot:nth-child(2) ~.top{
+    transform: translate(100%,0);
+}
+li.hot:nth-child(3) ~.top{
+    transform: translate(200%,0);
+}
+
+.message{
+    width: 900px;
+    margin: 0 auto;
+    /*height: 200px;*/
+}
+.message li{
+    font-size: 20px;
+    line-height: 3;
+    padding: 0 10px;
+    border-bottom: dotted 1px #9a9a9a;
+
+}
+.message li:nth-child(2n){
+  background: #bfcadf;
+}
+.message li:nth-child(2n+1){
+    background: #aae1e1;
+}
+.message li:hover{
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
+}
+.message time{
+    float: right;
+    font-size: 20px;
+    line-height: 3;
+    padding: 0 10px;
+    display: inline-block;
+}
+.message del{
+    float: right;
+    text-decoration: none;
+}

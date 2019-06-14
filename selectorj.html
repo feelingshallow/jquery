@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js"></script>
+</head>
+<body>
+<h1> jquery</h1>
+<ul>
+    <li>选择器 </li>
+    <li>属性选择器</li>
+</ul>
+<ul>
+    <li> 结构伪类选择器</li>
+</ul>
+<script>
+    $('*').css({listStyle:'none'})
+    $('ul').css({background:'red'})
+    $('li:first-child').css({color:'yellow'}).click(function () {
+           this.css({height:200+'px'})
+    } )
+</script>
+</body>
+</html>
