@@ -17,7 +17,7 @@ $(function () {
      }
 //    发牌
     let index=-1;
-   for (let i=0;i<7;i++){
+   for (let i=0;i<8;i++){
        for (let j=0;j<i;j++){
            index++;
            let obj=puke[index];
@@ -48,7 +48,7 @@ $(function () {
       $('.box').on('click','.puke',function () {
         let  _this=$(this);
           let [i,j]=_this.attr('id').split('_');
-         let id1=i*1+1+'_'+j;  let id2=i*1+1+'_'+(j*1+1)
+         let id1=i*1+1+'_'+j;  let id2=i*1+1+'_'+(j*1+1);
 
         if ($('#'+id1).length||$("#"+id2).length){
             return
@@ -64,7 +64,7 @@ $(function () {
           if (!frist){
               frist=_this
           } else {
-              let number1=frist.data('number'),number2=$(this).data('number')
+              let number1=frist.data('number'),number2=$(this).data('number');
              if (number1+number2===14){
              $('.active').animate({right:0,top:0,opacity:0},function () {
                  $(this).remove()
