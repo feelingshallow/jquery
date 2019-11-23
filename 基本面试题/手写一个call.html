@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     Function.prototype.myCall=function (obj) {
+          obj=obj||window;
+           const func=Symbol()
+           context[func]=this;
+           const args=Array.from(arguments).slice(1)
+           const res=context[func](...args)
+         delete obj[func];
+       return res
+     }
+
+
+</script>
+</body>
+</html>

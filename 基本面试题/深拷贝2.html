@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let obj1={
+        name:'zhangsan',
+        age:'18',
+        member:{
+            father:'s',
+            mother:'ss'
+        }
+    }
+    function deepClone(obj) {
+        if (obj===null){
+            return obj
+        }
+        const  result=Array.isArray(obj)?[]:{};
+        for (let key in obj){
+            if (typeof obj[key]==="object"){
+                result[key]=deepClone(obj[key])
+            } else {
+                result[key]=obj[key];
+            }
+        }
+        return result;
+    }
+    let obj2=deepClone(obj1);
+    obj1.member.father='msks'
+    console.log(obj2);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    Array.prototype.uniq = function () {
+
+        for (let i=0;i<this.length;i++){
+            for(let j=i+1;j<this.length;j++){
+                if (this[i]===this[j]){
+                    this.splice(j,1)
+                    j--;
+                }
+            }
+        }
+        return this;
+    }
+    let arr=[false, true, undefined, null, NaN, 0, 1, {}, {}, 'a', 'a', NaN]
+    console.log(arr.uniq());
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[1,1,2,3,2,3]
+    for (let i=0;i<arr.length;i++){
+        if (arr.indexOf(arr[i])===arr.lastIndexOf(arr[i])){
+
+        } else {
+            arr.splice(i,1)
+        }
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

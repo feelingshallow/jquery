@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Singleton = function(name) {
+        this.name = name;
+        this.instance = null;
+    }
+    Singleton.getInstance = function(name) {
+        if(!this.instance) {
+            this.instance = new Singleton(name);
+        }
+        return this.instance;
+    }
+</script>
+</body>
+</html>

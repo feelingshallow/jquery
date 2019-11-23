@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function async() {
+         let p=new Promise(function (resolve,reject) {
+               setTimeout(function () {
+                   console.log(1);
+                    resolve('请求成功')
+               },2000)
+         })
+        return p;
+    }
+    async().then(function (res) {
+        console.log(res);
+
+    })
+</script>
+</body>
+</html>

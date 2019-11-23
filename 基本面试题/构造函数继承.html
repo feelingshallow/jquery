@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Super=function (name='lisi') {
+        this.name=name;
+        this.getname=function () {
+            return this.name;
+        }
+    }
+    let Sub=function (name,sex) {
+        Super.call(this,name);
+        this.sex=sex;
+
+    }
+    let sub1=new Sub('zhangsan','male');
+    let sub2=new Sub('ada','female');
+    console.log(sub1.name);
+    console.log(sub1.hasOwnProperty('name'));//有自己的属性
+    console.log(sub1.getname() === sub2.getname());//方法没复用
+
+</script>
+</body>
+</html>

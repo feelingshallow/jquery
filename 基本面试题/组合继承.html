@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Super=function (name='lisi') {
+        this.name=name;
+    }
+    Super.prototype={
+        constructor:Super,
+        getname(){
+            return this.name;
+        }
+    }
+    let Sub=function (sex) {
+        Super.call(this,'lisi')
+        this.sex=sex;
+    }
+    Sub.prototype=new Super('lisi')
+    Sub.prototype.constructor=Sub;
+     let sub1=new Sub('male')
+     let sub2=new Sub('female')
+    console.log(sub1.name);
+    console.log(sub1.hasOwnProperty('name'));
+    console.log(sub1.getname === sub2.getname);
+    //继承了原型继承和构造函数继承的优点，复用了方法，子类又有各自的属性。
+    //因为父类的构造函数被执行了两次，子类的原型对象中也有一份弗雷的实例属性（name），而且这些属性会被子类实例的属性覆盖掉。
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let newarr=[]
+    let arr=[0,0,1,1,1,2,3,4,5];
+    newarr= arr.filter(v=>{
+       return arr.indexOf(v)==arr.lastIndexOf(v)
+   })
+    console.log(newarr);
+</script>
+</body>
+</html>

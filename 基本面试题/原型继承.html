@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Super=function (name='lisi') {
+        this.name=name;
+        this.getname=function () {
+            return this.name;
+        }
+    }
+    let Sub=function (sex) {
+        this.sex=sex;
+    }
+    Sub.prototype=new Super(name='lisi');
+    let sub1=new Sub('male');
+    let sub2=new Sub('female')
+    console.log(sub1.getname());
+    console.log(sub1.hasOwnProperty('name'));//false 说明是继承而来的属性
+    console.log(sub1.getname() === sub2.getname());//true 说明是复用了方法
+</script>
+</body>
+</html>

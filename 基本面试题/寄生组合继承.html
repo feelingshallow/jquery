@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inheritPrototype(subType,superType) {
+         var prototype=object(superType.prototype);
+         prototype.constructor=subType;
+         subType.prototype=prototype;
+    }
+    function SuperType(name) {
+         this.name=name;
+         this.colors=['red','blue','yello']
+
+    }
+    SuperType.prototype.sayname=function () {
+         return this.name;
+    }
+     function SubType(name,age) {
+         SuperType.call(this,name)
+         this.age=age;
+     }
+     inheritPrototype(SubType,SuperType);
+     SubType.prototype.sayage=function () {
+         alert(this.age);
+     }
+
+</script>
+</body>
+</html>

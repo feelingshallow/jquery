@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let obj1={
+        name:'zhangsan',
+        age:'18',
+        member:{
+             father:'s',
+             mother:'ss'
+        }
+    }
+
+    let obj2=Object.assign({},obj1)
+    obj1.member.father='lisi';
+    console.log(obj2);
+    console.log(obj1);
+</script>
+</body>
+</html>

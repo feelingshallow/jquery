@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let xhr=new XMLHttpRequest()
+    xhr.open('get','ajax1.0.html');
+    xhr.send()
+    xhr.onload=function (res) {
+         if (xhr.response==200){
+             console.log(res);
+         }
+    }
+</script>
+</body>
+</html>

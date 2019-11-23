@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function runAsync() {
+         var p=new Promise(function (resolve, reject) {
+              setTimeout(function () {
+                  console.log(1);
+                  resolve("datsssa1")
+              },2000)
+         });
+         return p;
+    }
+    function runAsync1() {
+        var p=new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log(2);
+                resolve("datsssa2")
+            },2000)
+        });
+        return p;
+    }
+    function runAsync2() {
+        var p=new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log(3);
+                resolve("datsssa3")
+            },2000)
+        });
+        return p;
+    }
+    // runAsync().then(function (data) {
+    //     console.log(data)
+    //     return runAsync1()
+    // }).then(function (data) {
+    //     console.log(data)
+    //     return runAsync2()
+    // }).then(function (data) {
+    //     console.log(data)
+    // })
+    Promise.race([runAsync(),runAsync1(),runAsync2()]).then(function (result) {
+        console.log(result);
+    })
+</script>
+</body>
+</html>

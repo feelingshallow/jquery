@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function getNumber() {
+        var p=new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                var num=Math.ceil(Math.random()*10);
+                if (num>5){
+                    resolve(num);
+                } else {
+                    reject("数字太小了")
+                }
+            },2000)
+        })
+        return p;
+    }
+    getNumber().then(function (data) {
+        console.log('resolved');
+        console.log(data);
+    },function (reason,data) {
+        console.log('rejected');
+        console.log(reason);
+    })
+</script>
+</body>
+</html>

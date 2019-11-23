@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let xhr=new XMLHttpRequest();
+    xhr.open('get','浅拷贝.html')
+    xhr.send();
+    xhr.onreadystatechange=function (res) {
+        if (xhr.readyState===4&&xhr.status===200){
+            console.log(res);
+        }
+    }
+</script>
+</body>
+</html>

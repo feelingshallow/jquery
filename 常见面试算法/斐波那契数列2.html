@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   function f(n) {
+       if (n===1||n===2){
+           return 1;
+       }
+       let ac1=1,ac2=2;
+       for(let i=2;i<n;i++){
+           [ac1,ac2]=[ac2,ac1+ac2]
+       }
+       return ac2;
+   }
+
+   console.log(f(5));
+</script>
+</body>
+</html>

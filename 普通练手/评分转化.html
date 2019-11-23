@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function rev(num) {
+        var arr=[]
+         let n=Math.round(num)
+         let res=n/10;
+         for (let i=0;i<5;i++){
+             if (i<res) {
+                 arr.push(1)
+             }else {
+                 arr.push(0)
+             }
+         }
+         return arr;
+    }
+
+    console.log(rev(35));
+</script>
+</body>
+</html>

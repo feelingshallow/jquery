@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<com1></com1>
+</div>
+<script src="vue.js"></script>
+<script>
+     var vm=new Vue({
+          el:#app,
+         data:{
+              msg:'父组件中的信息'
+         },
+         components:{
+              com1:{
+                  data(){
+                      return {
+                          title:'123',
+                          content:'qqq'
+                      }
+                  },
+                  template:`<h1>{{parentmessage}}</h1>`,
+                  props:['parentmsg'],
+              }
+         }
+     })
+</script>
+</body>
+</html>

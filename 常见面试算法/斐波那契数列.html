@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function  * fib(x) {
+         let a=1;
+         let b=1;
+         let n=0;
+         while(n<x){
+             yield a;
+              [a,b]=[b,a+b];
+              n++;
+             }
+    }
+
+    console.log(fib(5));
+</script>
+</body>
+</html>

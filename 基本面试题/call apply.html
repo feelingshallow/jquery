@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    value:1
+    }
+    let a={
+    function getvalue(name,age) {
+        console.log(name);
+        console.log(age);
+        console.log(this.value);
+    }
+
+    getvalue.apply(a, ['yck', '24'])
+    console.log(a.age);
+</script>
+</body>
+</html>
